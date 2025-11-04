@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #333; /* Dark background */
+}
+
+.calculator-container {
+    background-color: #000; /* Calculator body color */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 320px; /* Set a fixed width */
+}
+
+.display {
+    width: calc(100% - 10px);
+    height: 80px;
+    background-color: #000;
+    color: #fff;
+    font-size: 3em;
+    text-align: right;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 30px; /* Makes buttons circular/rounded */
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #fff; /* Default text color */
+}
+
+/* Number buttons */
+.num-btn {
+    background-color: #333333; /* Dark grey */
+}
+
+/* Control buttons (AC, 00, %) */
+.control-btn, .op-btn[data-op="%"] {
+    background-color: #a6a6a6; /* Light grey */
+    color: #000;
+}
+
+/* Operator buttons (+, -, x, ÷) */
+.operator {
+    background-color: #ff9500; /* Orange */
+}
+
+/* Equal button */
+.equal-btn {
+    background-color: #ff9500; /* Orange */
+    grid-column: span 1; /* Override if needed, but 1fr handles it */
+}
+
+/* Special button for zero to span two columns */
+.zero {
+    grid-column: span 2;
+    text-align: left;
+    padding-left: 20px;
+}
+
+button:active {
+    filter: brightness(1.2); /* Visual feedback on click */
+}
