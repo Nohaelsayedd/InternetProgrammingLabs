@@ -1,74 +1,102 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #c8d8e4);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
 .container {
-    width: 400px;
-    background-color: white;
+    background: #ffffff;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
 }
 
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
-form {
+.input-section {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin-bottom: 20px;
 }
 
-#textarea1 {
-    resize: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+#taskInput {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px 0 0 8px;
     font-size: 16px;
+    outline: none;
 }
 
-#button1 {
+#addTaskBtn {
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 0 8px 8px 0;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-#button1:hover {
+#addTaskBtn:hover {
     background-color: #0056b3;
 }
 
-ul {
-    list-style-type: none;
+/* Task List Styling */
+#taskList {
+    list-style: none;
     padding: 0;
-    margin-top: 20px;
 }
 
-li {
-    background-color: #f1f1f1;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 16px;
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#taskList li.completed {
+    background-color: #e6ffe6; 
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-text {
+    flex-grow: 1;
+    cursor: pointer; 
+}
+
+.actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    font-size: 14px;
+    transition: opacity 0.3s;
 }
 
-li:hover {
-    background-color: #e0e0e0;
+.actions .remove-btn {
+    background-color: #dc3545;
+    color: white;
 }
 
-li[style*="line-through"] {
-    color: gray;
+.actions .remove-btn:hover {
+    opacity: 0.8;
 }
