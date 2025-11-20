@@ -103,6 +103,8 @@ header nav a {
   margin-top: 5px;
 }
 
+/* ... (existing styles) ... */
+
 /* Trusted companies */
 .trusted {
   margin: 60px 0;
@@ -114,13 +116,39 @@ header nav a {
   font-size: 26px;
 }
 
-.trusted-logos {
-  display: flex;
-  justify-content: center;
+.trusted-grid {
+  /* This ensures the grid itself doesn't stretch too wide unnecessarily */
+  max-width: 1000px; 
+  margin: 0 auto;
+  
+  /* The layout: 4 columns, evenly spaced */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  justify-items: center; /* Center content in the cell horizontally */
+  align-items: center;   /* Center content in the cell vertically */
 }
 
-.trusted-logos img {
-  height: 35px;
-  opacity: 0.8;
+.trusted-item {
+  /* This ensures the container for the logo has a flexible size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Take up the whole grid column */
+}
+
+.trusted-item img {
+  /* The FIX: Constrain the image's size */
+  max-width: 100%; /* Important: prevent stretching beyond its container */
+  height: 45px; /* Set a consistent height for all logos */
+  width: auto;  /* Allow width to scale proportionally to height */
+  
+  /* Remove max-height for simplicity and use fixed height */
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.trusted-item img:hover {
+  opacity: 1;
 }

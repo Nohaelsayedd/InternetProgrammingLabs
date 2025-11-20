@@ -3,11 +3,13 @@ export default function TrustedCompanies({ list }) {
     <section className="trusted">
       <h2>Trusted by companies worldwide</h2>
 
-      <div className="trusted-logos">
+      <div className="trusted-grid">
         {list.map(company => (
-          <img key={company.id} src={company.logo} alt={company.name} />
+          <div className="trusted-item" key={company.id}>
+            <img src={company.logo} alt={company.name} />
+          </div>
         ))}
       </div>
     </section>
-  )
+  );
 }

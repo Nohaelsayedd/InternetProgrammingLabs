@@ -8,8 +8,8 @@ export default function Header() {
           <a href="#">Categories</a>
           <a href="#">Udemy Business</a>
           <a href="#">Teach on Udemy</a>
-          <a href="#">Login</a>
-          <a href="#">Sign up</a>
+          <b><a href="#" style={{color: '#a435f0'}}>Login</a>
+          <a href="#" style={{color: '#a435f0'}}>Sign up</a></b>
         </nav>
       </div>
     </header>
