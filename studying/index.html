@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Study Page</title>
+    </head>
+    <body>
+        <!--<h1><b>Welcome to My first page</b></h1>
+        <p id="message" >Welcome!</p>
+        <button onclick="changemessage()">Click Me</button>
+        <script>
+            function changemessage(){ //khaly balek ehna benghayar el message msh el button
+                document.getElementById("message").innerHTML="hello from js" 
+            }
+        </script>
+    -->
+       <!--  <h1 id="welcome">WELCOME</h1>
+        <button id="btn1">change the text</button>
+        <script>
+            //3shan ahot le haga event listener hadeeha id then
+            // ha get elemnt by id and attach it to a new const 
+            const button1=document.getElementById("btn1")
+            button1.addEventListener("click", () => {
+                document.getElementById("welcome").innerHTML = "Say HI";
+            });
+        </script>
+    -->
+        <!--<h1 id="msg">Change Background</h1>
+        <button id="btn">Change color</button>
+        <script>
+            const button=document.getElementById("btn") //baghayar background kolo yeb2a body
+            button.addEventListener("click",()=>{ document.body.style.backgroundColor="gray"
+                })
+            button.addEventListener("click",()=>{ //baghayar background haga specific yeb2a get its id and access it 
+                document.getElementById("msg").style.backgroundColor="purple"
+            })
+        </script>
+ //tab law 3ayza a alternate ?? check below 
+    -->
+       <!-- <h1>Change Background</h1>
+        <button id="btn">Change</button>
+       <script>
+        //btw hena it takes 2 times to alternate 3shan initially background color is empty not white 
+        const btn=document.getElementById("btn")
+        btn.addEventListener("click",()=>{
+            document.body.style.backgroundColor=
+                document.body.style.backgroundColor=="white"?"blue":"white"
+        });
+           
+        </script>
+    -->
+        <!--<h1>Greeting App</h1>
+        <input type="text" id="inuser" placeholder="enter your name">
+        <button id="btn" >Greet</button>
+        <p id="out"></p>
+        <script>
+            const but = document.getElementById("btn")
+            but.addEventListener("click",()=>{
+                // da ghalat: const user=document.getElementById("inuser"); //aham haga el value hena 
+                const user=document.getElementById("inuser").value;
+                //bardo ghalat 3shan double quites not`
+                //document.getElementById("out").innerHTML="hello ${user}";
+                document.getElementById("out").innerHTML=`hello ${user}`;
+            })
+        </script>
+    -->
+        <h1>Event Objects in Action</h1>
+        <a href="www.google.chom" id="link">go if you dare</a>
+        <script>
+            const link=document.getElementById("link")
+            link.addEventListener("click",()=>{
+                event.preventDefault();
+                alert("navigation to link prevented ")
+            })
+
+        </script>
+    </body>
+</html>
